@@ -2,7 +2,10 @@
 
 An algorithmic options trading project building a **Bitcoin (BTC) At-The-Money (ATM) Short Straddle** strategy using the **NautilusTrader** framework and the **Bybit** exchange adapter, managed with **uv** and deployed with a **Streamlit Web UI**.
 
-> **Live Deployment:** Cloud-ready Streamlit dashboard with real-time Bybit options pricing, automatic ATM strike detection, multi-horizon payoff profiling, and paper trade execution.
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://aditya-hariom-task-submit-app-2btu4n.streamlit.app/)
+
+> 🚀 **Live Interactive Web Dashboard:** **[https://aditya-hariom-task-submit-app-2btu4n.streamlit.app/](https://aditya-hariom-task-submit-app-2btu4n.streamlit.app/)**  
+> Access the fully functional BTC ATM Short Straddle dashboard live in your browser without local setup.
 
 ---
 
@@ -100,7 +103,11 @@ This automatically sets up the `.venv` with Python 3.12 and installs all depende
 
 ### Launching the Streamlit UI
 
-#### Method 1: Using Virtual Environment Directly (Recommended)
+#### Method 1: Live Cloud App (No Local Setup Required)
+Simply open the live URL:  
+👉 **[https://aditya-hariom-task-submit-app-2btu4n.streamlit.app/](https://aditya-hariom-task-submit-app-2btu4n.streamlit.app/)**
+
+#### Method 2: Using Virtual Environment Locally
 ```powershell
 # Windows (PowerShell)
 .\.venv\Scripts\python.exe main.py
