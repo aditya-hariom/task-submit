@@ -44,12 +44,13 @@ risk_mgr: RiskManager = st.session_state.risk_manager
 def fetch_market():
     client = BybitMarketClient()
     spot = client.get_btc_price()
-    expiries, chain = client.get_organized_option_chain()
-    return spot, expiries, chain
+    spot_px = spot.get("price", 74200.0)
+    expiries, chain, data_source = client.get_organized_option_chain(spot_price=spot_px)
+    return spot, expiries, chain, data_source
 
 
-spot_data, expiries, chain = fetch_market()
-current_spot = spot_data.get("price", 74000.0)
+spot_data, expiries, chain, data_source = fetch_market()
+current_spot = spot_data.get("price", 74200.0)
 change_24h = spot_data.get("change_24h", 0.0)
 
 # ==========================================
@@ -59,18 +60,14 @@ header_col, btn_col = st.columns([4, 1])
 with header_col:
     st.title("⚡ BTC ATM Short Straddle Strategy")
     st.markdown(
-        "**NautilusTrader Options Engine** • Simultaneously writes **At-The-Money Call + Put** on Bybit to capture time decay (Theta)."
+        f"**NautilusTrader Options Engine** • Simultaneously writes **At-The-Money Call + Put** on Bybit to capture time decay (Theta).  \n"
+        f"Feed: `{data_source}`"
     )
 with btn_col:
     st.write("")
     if st.button("🔄 Refresh Data", use_container_width=True):
         st.cache_data.clear()
         st.rerun()
-
-# Fallback if no expiries loaded
-if not expiries:
-    st.error("Unable to load options chain from Bybit. Please check internet connection.")
-    st.stop()
 
 # ==========================================
 # 5. Core Market Numbers (Clean Native Metrics)
