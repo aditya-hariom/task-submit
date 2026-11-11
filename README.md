@@ -1,6 +1,8 @@
 # BTC ATM Short Straddle
 
-An algorithmic options trading project building a **Bitcoin (BTC) At-The-Money (ATM) Short Straddle** strategy using the **NautilusTrader** framework and the **Bybit** exchange adapter, managed with **uv**.
+An algorithmic options trading project building a **Bitcoin (BTC) At-The-Money (ATM) Short Straddle** strategy using the **NautilusTrader** framework and the **Bybit** exchange adapter, managed with **uv** and deployed with a **Streamlit Web UI**.
+
+> **Live Deployment:** Cloud-ready Streamlit dashboard with real-time Bybit options pricing, automatic ATM strike detection, multi-horizon payoff profiling, and paper trade execution.
 
 ---
 
