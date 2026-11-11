@@ -1,0 +1,18 @@
+[project]
+name = "btc-short-straddle"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "nautilus-trader==1.231.0",
+    "plotly>=7.1.0",
+    "python-dotenv==1.2.4",
+    "requests>=2.34.2",
+    "streamlit>=1.67.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest==9.2.0",
+]

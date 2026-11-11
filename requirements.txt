@@ -1,0 +1,13 @@
+# Core Trading Framework
+nautilus-trader==1.231.0
+
+# Environment Variable Management
+python-dotenv==1.2.4
+
+# User Interface & Visualization
+streamlit>=1.67.0
+plotly>=7.1.0
+requests>=2.34.2
+
+# Testing Framework
+pytest==9.2.0
